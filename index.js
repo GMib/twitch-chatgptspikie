@@ -46,7 +46,7 @@ app.get('/gpt/:text', async (req, res) => {
     
     //The agent should recieve Username:Message in the text to identify conversations with different users in his history. 
     
-    const text = encodeURIComponent(req.params.text);
+    const text = req.params.text;
     const { Configuration, OpenAIApi } = require("openai");
 
     const configuration = new Configuration({
